@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Windows Registry:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Windows_Registry_jar</output-path>
+    <root id="archive" name="Windows Registry.jar">
+      <element id="module-output" name="Windows Registry" />
+    </root>
+  </artifact>
+</component>

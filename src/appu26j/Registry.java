@@ -44,6 +44,6 @@ public class Registry
             throw new NoPermsException();
         }
 
-        return output.substring(0, output.length() - 1);
+        return output.length() != 0 ? output.substring(0, output.length() - 1) : output.toString();
     }
 }

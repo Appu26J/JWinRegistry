@@ -9,27 +9,16 @@ import java.io.InputStreamReader;
 
 public class Registry
 {
-    private static final boolean PERMS = hasPerms();
-
     public static String execute(String command) throws IOException, NoPermsException
     {
-        if (!PERMS)
-        {
-            throw new NoPermsException();
-        }
-
         if (!command.contains("REG"))
         {
             command = "REG " + command;
         }
 
-        if (!command.contains("/F"))
-        {
-            command += " /F";
-        }
-
         Process process = Runtime.getRuntime().exec(command);
         StringBuilder output = new StringBuilder();
+        boolean accessDenied = false;
 
         try (InputStream inputStream = process.getInputStream(); InputStreamReader inputStreamReader = new InputStreamReader(inputStream); BufferedReader bufferedReader = new BufferedReader(inputStreamReader))
         {
@@ -39,31 +28,22 @@ public class Registry
             {
                 if (!line.isEmpty())
                 {
+                    if (line.equals("ERROR: Access is denied."))
+                    {
+                        accessDenied = true;
+                        break;
+                    }
+
                     output.append(line).append("\n");
                 }
             }
         }
 
+        if (accessDenied)
+        {
+            throw new NoPermsException();
+        }
+
         return output.substring(0, output.length() - 1);
-    }
-
-    public static boolean hasPerms()
-    {
-        if (System.getProperty("os.name") == null || !System.getProperty("os.name").toLowerCase().contains("win"))
-        {
-            return false;
-        }
-
-        try
-        {
-            Process process = Runtime.getRuntime().exec("reg query \"HKU\\S-1-5-19\"");
-            process.waitFor();
-            return process.exitValue() == 0;
-        }
-
-        catch (Exception e)
-        {
-            return false;
-        }
     }
 }

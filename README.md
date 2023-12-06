@@ -7,4 +7,4 @@ It's just like how you use the *REG* command in Command Prompt.
 Registry.execute("ADD HKEY_LOCAL_MACHINE\SOFTWARE\MyJavaApp");
 ```
 ### Download
-https://github.com/AppleClient/Windows-Registry/releases/download/WindowsRegistry/windowsregistry.jar
+https://github.com/Appu26J/Windows-Registry/releases/download/WindowsRegistry/windowsregistry.jar

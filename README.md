@@ -6,5 +6,8 @@ It's just like how you use the *REG* command in Command Prompt.
 ```java
 Registry.execute("ADD HKEY_LOCAL_MACHINE\SOFTWARE\MyJavaApp");
 ```
-### Download
+*Example class based on this library:*
+- https://github.com/Appu26J/Softuninstall/blob/main/src/appu26j/utils/AppUtil.java
+
+### Library Download
 https://github.com/Appu26J/JWinRegistry/releases/download/WindowsRegistry/jwinregistry.jar

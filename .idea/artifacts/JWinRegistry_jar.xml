@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="JWinRegistry:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/JWinRegistry</output-path>
+    <root id="archive" name="JWinRegistry.jar">
+      <element id="module-output" name="Windows Registry" />
+    </root>
+  </artifact>
+</component>

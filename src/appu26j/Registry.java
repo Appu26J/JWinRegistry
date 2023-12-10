@@ -11,7 +11,7 @@ public class Registry
 {
     public static String execute(String command) throws IOException, NoPermsException
     {
-        if (!command.contains("REG"))
+        if (!command.toLowerCase().startsWith("reg"))
         {
             command = "REG " + command;
         }

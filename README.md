@@ -1,4 +1,4 @@
-<img width="360" alt="image" src="https://github.com/Appu26J/JWinRegistry/assets/128838345/b3662950-fb07-40f6-9766-4ffee15d44b7">
+<img width="360" alt="image" src="https://github.com/Appu26J/JWinRegistry/assets/128838345/f989604b-cfb8-4503-9d29-60ee3b0be99f">
 
 A Java library which allows you to execute Windows registry commands in Java, in just one line of code.  
 It's just like how you use the *REG* command in Command Prompt.
